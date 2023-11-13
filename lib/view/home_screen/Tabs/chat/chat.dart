@@ -27,10 +27,11 @@ class ChatScreen extends StatelessWidget {
                   height: 5,
                 ),
                 CircleAvatar(
-                  radius: 13,
+                  radius: 12,
+                  backgroundColor: Colors.green,
                   child: Text(
                     "10",
-                    style: TextStyle(color: Colors.black, fontSize: 13),
+                    style: TextStyle(color: Colors.black, fontSize: 12),
                   ),
                 )
               ],

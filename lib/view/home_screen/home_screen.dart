@@ -1,13 +1,20 @@
+import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp/view/home_screen/Tabs/Calles.dart';
-import 'package:whatsapp/view/home_screen/Tabs/Group.dart';
-import 'package:whatsapp/view/home_screen/Tabs/Status.dart';
+import 'package:whatsapp/view/home_screen/Tabs/Calls/Calles.dart';
+import 'package:whatsapp/view/home_screen/Tabs/Group/Group.dart';
+import 'package:whatsapp/view/home_screen/Tabs/Status/Status.dart';
 import 'package:whatsapp/view/home_screen/Tabs/chat/chat.dart';
-import 'package:whatsapp/view/home_screen/Tabs/chat/detail.dart';
+import 'package:whatsapp/view/PopUp_Screen/pop_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController textcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -22,13 +29,23 @@ class HomeScreen extends StatelessWidget {
               Icons.camera_alt_outlined,
             ),
             SizedBox(
-              width: 20,
+              width: 30,
             ),
-            Icon(Icons.search),
+            AnimSearchBar(
+              helpText: "search",
+              width: 250,
+              textController: textcontroller,
+              onSuffixTap: () {
+                setState(() {
+                  textcontroller.clear();
+                });
+              },
+              onSubmitted: (String) {},
+            ),
             SizedBox(
               width: 20,
             ),
-            Icon(Icons.more_vert)
+            Pop_Screen()
           ],
           bottom: TabBar(
               indicator: UnderlineTabIndicator(
