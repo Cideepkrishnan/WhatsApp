@@ -7,6 +7,24 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.grey,
+            child: Icon(Icons.edit),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.green[600],
+            child: Icon(Icons.camera_alt_outlined),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -38,6 +56,8 @@ class StatusScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 29,
+                    backgroundImage: NetworkImage(
+                        "https://i.pinimg.com/564x/a4/e8/8f/a4e88fc30e5e5cf7ce63608defec0d6d.jpg"),
                   ),
                   Positioned(
                     bottom: 2,
@@ -69,7 +89,7 @@ class StatusScreen extends StatelessWidget {
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
               physics: ScrollPhysics(),
-              itemCount: database.forchat.length,
+              itemCount: database.forstatus.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
@@ -77,19 +97,20 @@ class StatusScreen extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 30,
-                        backgroundColor: Colors.green[600],
+                        backgroundColor: Colors.green[400],
                       ),
                       Positioned(
-                          bottom: 5,
-                          left: 7,
+                          bottom: 4,
+                          left: 6,
                           child: CircleAvatar(
-                            radius: 23,
-                            backgroundColor: Colors.black,
+                            radius: 24,
+                            backgroundImage: NetworkImage(
+                                database.forstatus[index]["StatusImage"]),
                           ))
                     ],
                   ),
-                  title: Text(database.forchat[index]["Name"]),
-                  subtitle: Text(database.forchat[index]["timeofstatus"]),
+                  title: Text(database.forstatus[index]["StatusName"]),
+                  subtitle: Text(database.forstatus[index]["timeofstatus"]),
                 ),
               ),
             )

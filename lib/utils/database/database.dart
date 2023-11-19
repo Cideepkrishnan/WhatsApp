@@ -143,6 +143,168 @@ class database {
     }
   ];
 
+  static List<Map> forstatus = [
+    {
+      "StatusName": "Ammus",
+      "StatusImage":
+          "https://i.pinimg.com/564x/a3/e9/14/a3e91477f97c62ae9a6dbf220a704cf1.jpg",
+      "timeofstatus": "2:43 pm",
+    },
+    {
+      "StatusName": "Aswin",
+      "StatusImage":
+          "https://i.pinimg.com/564x/0d/f5/eb/0df5eb8da9d790fe2947bf71fce456c1.jpg",
+      "timeofstatus": "2:23 pm",
+    },
+    {
+      "StatusName": "Ananthu",
+      "StatusImage":
+          "https://i.pinimg.com/564x/40/87/35/4087357bd99712656b3492b60cc9d677.jpg",
+      "timeofstatus": "11:23 am",
+    },
+    {
+      "StatusName": "Yadhu",
+      "StatusImage":
+          "https://i.pinimg.com/564x/6f/e0/bf/6fe0bf505347615619b9f4dbb131671a.jpg",
+      "timeofstatus": "2:23 pm",
+    },
+    {
+      "StatusName": "Sanju",
+      "StatusImage":
+          "https://i.pinimg.com/564x/38/07/f0/3807f089f04f206d2e27c38c22efaa24.jpg",
+      "timeofstatus": "11:14 pm",
+    },
+    {
+      "StatusName": "Adharsh",
+      "StatusImage":
+          "https://i.pinimg.com/736x/a9/93/2e/a9932e5ba59e145003544eab8d21c56f.jpg",
+      "timeofstatus": "10:46 am",
+    },
+    {
+      "StatusName": "Hari",
+      "StatusImage":
+          "https://i.pinimg.com/564x/1c/e1/2c/1ce12c85762d920181382f2f17fb0a38.jpg",
+      "timeofstatus": "09:46 am",
+    },
+    {
+      "StatusName": "Abhi",
+      "StatusImage":
+          "https://i.pinimg.com/564x/72/32/80/7232807f89ae6f980654153cc610168e.jpg",
+      "timeofstatus": "06:55 am",
+    },
+    {
+      "StatusName": "Abhin",
+      "StatusImage":
+          "https://i.pinimg.com/564x/6f/10/f9/6f10f9b1a1aef4173e9f4a5d12c8a4ae.jpg",
+      "timeofstatus": "09:52 pm",
+    },
+    {
+      "StatusName": "Midhun",
+      "StatusImage":
+          "https://i.pinimg.com/564x/5a/31/c4/5a31c46b0d3ecfc910febc816f3fdead.jpg",
+      "timeofstatus": "yesterday",
+    },
+    {
+      "StatusName": "Varun",
+      "StatusImage":
+          "https://i.pinimg.com/564x/49/b8/ac/49b8aca83b062694bfec15041ffbb39a.jpg",
+      "timeofstatus": "yesterday",
+    },
+    {
+      "StatusName": "Arya",
+      "StatusImage":
+          "https://i.pinimg.com/564x/43/4c/62/434c6203fc29f88dfb0305e6c927ea98.jpg",
+      "timeofstatus": "yesterday",
+    },
+    {
+      "StatusName": "Arun",
+      "StatusImage":
+          "https://i.pinimg.com/564x/ca/3d/11/ca3d11216bbb50de4160a3ac11ca863d.jpg",
+      "timeofstatus": "yesterday",
+    }
+  ];
+
+  static List<Map> forcall = [
+    {
+      "CallName": "Ammus",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/woman9-256.png",
+      "MissCaltime": "14 november, 12:34 pm"
+    },
+    {
+      "CallName": "Aswin",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man4-512.png",
+      "MissCaltime": "10:25 pm"
+    },
+    {
+      "CallName": "Ananthu",
+      "CallProfile":
+          "https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/7-512.png",
+      "MissCaltime": "03:45 pm"
+    },
+    {
+      "CallName": "Yadhu",
+      "CallProfile":
+          "https://cdn0.iconfinder.com/data/icons/standard-characters/100/proper_boy3-512.png",
+      "MissCaltime": "03:45 pm"
+    },
+    {
+      "CallName": "Sanju",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/professions-1-4/132/30-512.png",
+      "MissCaltime": "2:12 am",
+    },
+    {
+      "CallName": "Adharsh",
+      "CallProfile":
+          "https://th.bing.com/th/id/OIP.YGiI9uYC5lf5nC8bbL0cSAHaHa?pid=ImgDet&rs=1",
+      "MissCaltime": "09:15 pm",
+    },
+    {
+      "CallName": "Hari",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/professions-1-4/132/33-512.png",
+      "MissCaltime": "04:55 pm",
+    },
+    {
+      "CallName": "Abhi",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man7-512.png",
+      "MissCaltime": "09:10 pm",
+    },
+    {
+      "CallName": "Abhin",
+      "CallProfile":
+          "https://cdn4.iconfinder.com/data/icons/avatars-21/512/avatar-circle-human-male-5-512.png",
+      "MissCaltime": "05:18 pm",
+    },
+    {
+      "CallName": "Midhun",
+      "CallProfile":
+          "https://cdn4.iconfinder.com/data/icons/avatars-21/512/avatar-circle-human-male-1-512.png",
+      "MissCaltime": "07:34 am",
+    },
+    {
+      "CallName": "Varun",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/professions-2-4/132/67-512.png",
+      "MissCaltime": " 11:34 pm",
+    },
+    {
+      "CallName": "Arya",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/avatars-collection/256/21-512.png",
+      "MissCaltime": "09:34 am",
+    },
+    {
+      "CallName": "Arun",
+      "CallProfile":
+          "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man5-512.png",
+      "MissCaltime": " 10:34 pm",
+    }
+  ];
+
   static List<Map> settings = [
     {
       "icon": Icon(Icons.key),

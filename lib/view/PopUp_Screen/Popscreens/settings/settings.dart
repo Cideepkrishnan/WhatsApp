@@ -19,8 +19,10 @@ class settings extends StatelessWidget {
               child: ListTile(
                 leading: CircleAvatar(
                   radius: 30,
+                  backgroundImage: NetworkImage(
+                      "https://i.pinimg.com/564x/a4/e8/8f/a4e88fc30e5e5cf7ce63608defec0d6d.jpg"),
                 ),
-                title: Text("Cideep"),
+                title: Text("Cideep krishna"),
                 subtitle: Text("in the end you only have yourself"),
               ),
             ),

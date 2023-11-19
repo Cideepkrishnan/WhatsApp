@@ -8,6 +8,11 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green[600],
+        onPressed: () {},
+        child: Icon(Icons.message),
+      ),
       body: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
@@ -38,7 +43,7 @@ class ChatScreen extends StatelessWidget {
                   ),
                   CircleAvatar(
                     radius: 12,
-                    backgroundColor: Colors.green,
+                    backgroundColor: Colors.greenAccent[700],
                     child: Text(
                       database.forchat[index]["message"],
                       style: TextStyle(color: Colors.black, fontSize: 12),

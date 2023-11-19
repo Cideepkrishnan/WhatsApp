@@ -42,17 +42,17 @@ class CallScreen extends StatelessWidget {
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
               physics: ScrollPhysics(),
-              itemCount: database.forchat.length,
+              itemCount: database.forcall.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30,
                     backgroundImage:
-                        NetworkImage(database.forchat[index]["profile"]),
+                        NetworkImage(database.forcall[index]["CallProfile"]),
                   ),
-                  title: Text(database.forchat[index]["Name"]),
-                  subtitle: Text(database.forchat[index]["MissCaltime"]),
+                  title: Text(database.forcall[index]["CallName"]),
+                  subtitle: Text(database.forcall[index]["MissCaltime"]),
                   trailing: Icon(
                     Icons.call,
                     color: Colors.green[800],
