@@ -1,5 +1,6 @@
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp/view/home_screen/Tabs/Calls/Calles.dart';
 import 'package:whatsapp/view/home_screen/Tabs/Group/Group.dart';
 import 'package:whatsapp/view/home_screen/Tabs/Status/Status.dart';
@@ -23,7 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 35, 35, 37),
-          title: Text("WhatsApp"),
+          title: Text(
+            "WhatsApp",
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+            ),
+          ),
           actions: [
             Icon(
               Icons.camera_alt_outlined,

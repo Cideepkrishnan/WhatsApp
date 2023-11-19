@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/linked_device.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/new_broadcast.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/new_group.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/payments.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/settings.dart';
-import 'package:whatsapp/view/PopUp_Screen/Popscreens/starred_message.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/linked_device/linked_device.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/new_broadcast/new_broadcast.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/new_group/new_group.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/payments/payments.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/settings/settings.dart';
+import 'package:whatsapp/view/PopUp_Screen/Popscreens/Stared_message/starred_message.dart';
 
 class Pop_Screen extends StatelessWidget {
   const Pop_Screen({super.key});
@@ -13,7 +13,10 @@ class Pop_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopupMenuButton(
       color: Colors.black,
-      icon: Icon(Icons.more_vert),
+      icon: Icon(
+        Icons.more_vert,
+        color: Colors.white,
+      ),
       itemBuilder: (context) => [
         PopupMenuItem(
           onTap: () {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/view/home_screen/home_screen.dart';
 import 'package:whatsapp/view/splash_screen/splash_screen.dart';
 
 void main() {
