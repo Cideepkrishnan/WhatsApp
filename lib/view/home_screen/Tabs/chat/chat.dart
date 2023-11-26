@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
 import 'package:whatsapp/view/home_screen/Tabs/chat/detail.dart';
 
@@ -8,10 +9,15 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         backgroundColor: Colors.green[600],
         onPressed: () {},
-        child: Icon(Icons.message),
+        child: Icon(
+          Icons.message,
+          color: Theme.of(context).colorScheme.primary,
+        ),
       ),
       body: ListView.builder(
         shrinkWrap: true,
@@ -33,11 +39,18 @@ class ChatScreen extends StatelessWidget {
                 backgroundImage:
                     NetworkImage(database.forchat[index]["profile"]),
               ),
-              title: Text(database.forchat[index]["Name"]),
-              subtitle: Text(database.forchat[index]["chat"]),
+              title: Text(
+                database.forchat[index]["Name"],
+                style: TextStyle(color: Theme.of(context).colorScheme.primary),
+              ),
+              subtitle: Text(database.forchat[index]["chat"],
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary)),
               trailing: Column(
                 children: [
-                  Text(database.forchat[index]["time"]),
+                  Text(database.forchat[index]["time"],
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary)),
                   SizedBox(
                     height: 5,
                   ),
@@ -46,7 +59,9 @@ class ChatScreen extends StatelessWidget {
                     backgroundColor: Colors.greenAccent[700],
                     child: Text(
                       database.forchat[index]["message"],
-                      style: TextStyle(color: Colors.black, fontSize: 12),
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.background,
+                          fontSize: 12),
                     ),
                   )
                 ],

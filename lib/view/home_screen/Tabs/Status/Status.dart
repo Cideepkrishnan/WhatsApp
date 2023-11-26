@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
 
 class StatusScreen extends StatelessWidget {
@@ -7,21 +8,36 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.grey,
-            child: Icon(Icons.edit),
+          Container(
+            height: 40,
+            width: 40,
+            child: FittedBox(
+              child: FloatingActionButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14)),
+                onPressed: () {},
+                backgroundColor: colorconstant.PrimaryGrey,
+                child: Icon(
+                  Icons.edit,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+            ),
           ),
           SizedBox(
             height: 15,
           ),
           FloatingActionButton(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             onPressed: () {},
             backgroundColor: Colors.green[600],
-            child: Icon(Icons.camera_alt_outlined),
+            child: Icon(Icons.camera_alt,
+                color: Theme.of(context).colorScheme.primary),
           ),
         ],
       ),
@@ -40,13 +56,18 @@ class StatusScreen extends StatelessWidget {
                       child: Text(
                         "Status",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                            color: Theme.of(context).colorScheme.primary,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                     SizedBox(
                       width: 270,
                     ),
-                    Icon(Icons.more_vert)
+                    Icon(
+                      Icons.more_vert,
+                      color: Theme.of(context).colorScheme.primary,
+                    )
                   ],
                 ),
               ),
@@ -69,21 +90,31 @@ class StatusScreen extends StatelessWidget {
                           child: Icon(
                         Icons.add,
                         size: 21,
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.primary,
                       )),
                     ),
                   )
                 ],
               ),
-              title: Text("My status"),
-              subtitle: Text("Tap to add status update"),
+              title: Text(
+                "My status",
+                style: TextStyle(color: Theme.of(context).colorScheme.primary),
+              ),
+              subtitle: Text(
+                "Tap to add status update",
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.secondary),
+              ),
             ),
             SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Recent updates"),
+              child: Text(
+                "Recent updates",
+                style: TextStyle(color: Theme.of(context).colorScheme.primary),
+              ),
             ),
             ListView.builder(
               scrollDirection: Axis.vertical,
@@ -109,8 +140,16 @@ class StatusScreen extends StatelessWidget {
                           ))
                     ],
                   ),
-                  title: Text(database.forstatus[index]["StatusName"]),
-                  subtitle: Text(database.forstatus[index]["timeofstatus"]),
+                  title: Text(
+                    database.forstatus[index]["StatusName"],
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
+                  subtitle: Text(
+                    database.forstatus[index]["timeofstatus"],
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
                 ),
               ),
             )

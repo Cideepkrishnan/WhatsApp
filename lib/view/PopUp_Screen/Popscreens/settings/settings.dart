@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
 
 class settings extends StatelessWidget {
@@ -7,9 +8,19 @@ class settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text("Settings"),
-        actions: [Icon(Icons.search)],
+        backgroundColor: Theme.of(context).colorScheme.background,
+        title: Text(
+          "Settings",
+          style: TextStyle(color: Theme.of(context).colorScheme.primary),
+        ),
+        actions: [
+          Icon(
+            Icons.search,
+            color: Theme.of(context).colorScheme.primary,
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -22,12 +33,21 @@ class settings extends StatelessWidget {
                   backgroundImage: NetworkImage(
                       "https://i.pinimg.com/564x/a4/e8/8f/a4e88fc30e5e5cf7ce63608defec0d6d.jpg"),
                 ),
-                title: Text("Cideep krishna"),
-                subtitle: Text("in the end you only have yourself"),
+                title: Text(
+                  "Cideep krishna",
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
+                ),
+                subtitle: Text(
+                  "in the end you only have yourself",
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
+                ),
               ),
             ),
             Divider(
-              thickness: 2,
+              thickness: .9,
+              color: Theme.of(context).colorScheme.primary,
             ),
             ListView.builder(
               scrollDirection: Axis.vertical,
@@ -46,8 +66,16 @@ class settings extends StatelessWidget {
                   },
                   child: ListTile(
                     leading: database.settings[index]["icon"],
-                    title: Text(database.settings[index]["title"]),
-                    subtitle: Text(database.settings[index]["subtitle"]),
+                    title: Text(
+                      database.settings[index]["title"],
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary),
+                    ),
+                    subtitle: Text(
+                      database.settings[index]["subtitle"],
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary),
+                    ),
                   ),
                 ),
               ),

@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsapp/utils/Theme/theme_provider.dart';
+import 'package:whatsapp/view/home_screen/home_screen.dart';
 import 'package:whatsapp/view/splash_screen/splash_screen.dart';
 
 void main() {
-  runApp(myapp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const myapp(),
+    ),
+  );
 }
 
 class myapp extends StatelessWidget {
@@ -11,7 +19,9 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

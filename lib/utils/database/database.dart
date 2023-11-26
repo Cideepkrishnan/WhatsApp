@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/view/PopUp_Screen/Popscreens/settings/widgets/aacount.dart';
 import 'package:whatsapp/view/PopUp_Screen/Popscreens/settings/widgets/avatar.dart';
 import 'package:whatsapp/view/PopUp_Screen/Popscreens/settings/widgets/chats.dart';
@@ -307,46 +308,50 @@ class database {
 
   static List<Map> settings = [
     {
-      "icon": Icon(Icons.key),
+      "icon": Icon(Icons.key, color: colorconstant.PrimaryGrey,),
       "title": "Account",
       "subtitle": "Security notifications,change number"
     },
     {
-      "icon": Icon(Icons.lock),
+      "icon": Icon(Icons.lock, color: colorconstant.PrimaryGrey),
       "title": "Privacy",
       "subtitle": "Block contacts, disappearing message"
     },
     {
-      "icon": Icon(Icons.tag_faces),
+      "icon": Icon(Icons.tag_faces, color: colorconstant.PrimaryGrey),
       "title": "Avatar",
       "subtitle": "Create, edit, profile photo"
     },
     {
-      "icon": Icon(Icons.chat),
+      "icon": Icon(Icons.chat, color: colorconstant.PrimaryGrey),
       "title": "Chats",
       "subtitle": "Theme, walpapers, chat history"
     },
     {
-      "icon": Icon(Icons.notifications),
+      "icon": Icon(Icons.notifications, color: colorconstant.PrimaryGrey),
       "title": "Notifications",
       "subtitle": "Message,group & call tones"
     },
     {
-      "icon": Icon(Icons.data_usage),
+      "icon": Icon(Icons.data_usage, color: colorconstant.PrimaryGrey),
       "title": "Storage and data",
       "subtitle": "Network usage,auto-download"
     },
     {
-      "icon": Icon(Icons.language),
+      "icon": Icon(Icons.language, color: colorconstant.PrimaryGrey),
       "title": "App language",
       "subtitle": "English (device's language)"
     },
     {
-      "icon": Icon(Icons.help_outline),
+      "icon": Icon(Icons.help_outline, color: colorconstant.PrimaryGrey),
       "title": "Help",
       "subtitle": "Help centre,contact us,privacy policy"
     },
-    {"icon": Icon(Icons.group), "title": "Invite a friend", "subtitle": ""},
+    {
+      "icon": Icon(Icons.group, color: colorconstant.PrimaryGrey),
+      "title": "Invite a friend",
+      "subtitle": ""
+    },
   ];
 }
 
@@ -364,22 +369,33 @@ class screns {
   ];
   static List<Map> accountscreen = [
     {
-      "AccountIcon": Icon(Icons.security),
+      "AccountIcon": Icon(
+        Icons.security,
+        color: colorconstant.PrimaryGrey,
+      ),
       "AccountItems": "security notifications"
     },
     {
-      "AccountIcon": Icon(Icons.verified),
+      "AccountIcon": Icon(Icons.verified, color: colorconstant.PrimaryGrey),
       "AccountItems": "Two step verification"
     },
     {
-      "AccountIcon": Icon(Icons.change_history),
+      "AccountIcon":
+          Icon(Icons.change_history, color: colorconstant.PrimaryGrey),
       "AccountItems": "change number"
     },
-    {"AccountIcon": Icon(Icons.info), "AccountItems": "Request account info"},
     {
-      "AccountIcon": Icon(Icons.person_add_alt_1_rounded),
+      "AccountIcon": Icon(Icons.info, color: colorconstant.PrimaryGrey),
+      "AccountItems": "Request account info"
+    },
+    {
+      "AccountIcon": Icon(Icons.person_add_alt_1_rounded,
+          color: colorconstant.PrimaryGrey),
       "AccountItems": "Add account"
     },
-    {"AccountIcon": Icon(Icons.delete), "AccountItems": "Delete account"},
+    {
+      "AccountIcon": Icon(Icons.delete, color: colorconstant.PrimaryGrey),
+      "AccountItems": "Delete account"
+    },
   ];
 }

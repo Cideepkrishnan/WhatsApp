@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
 
 class CallScreen extends StatelessWidget {
@@ -7,6 +8,7 @@ class CallScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -24,8 +26,16 @@ class CallScreen extends StatelessWidget {
                     size: 29,
                   ),
                 ),
-                title: Text("Create call link"),
-                subtitle: Text("Share a link of your WhatsApp call"),
+                title: Text(
+                  "Create call link",
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
+                ),
+                subtitle: Text(
+                  "Share a link of your WhatsApp call",
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
+                ),
               ),
             ),
             SizedBox(
@@ -35,7 +45,10 @@ class CallScreen extends StatelessWidget {
               padding: const EdgeInsets.all(14.0),
               child: Text(
                 "Recent",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             ListView.builder(
@@ -51,8 +64,16 @@ class CallScreen extends StatelessWidget {
                     backgroundImage:
                         NetworkImage(database.forcall[index]["CallProfile"]),
                   ),
-                  title: Text(database.forcall[index]["CallName"]),
-                  subtitle: Text(database.forcall[index]["MissCaltime"]),
+                  title: Text(
+                    database.forcall[index]["CallName"],
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
+                  subtitle: Text(
+                    database.forcall[index]["MissCaltime"],
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
                   trailing: Icon(
                     Icons.call,
                     color: Colors.green[800],
