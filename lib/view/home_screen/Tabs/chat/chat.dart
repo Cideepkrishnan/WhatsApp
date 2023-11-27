@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
+import 'package:whatsapp/view/home_screen/Tabs/chat/contactslist/contacts.dart';
 import 'package:whatsapp/view/home_screen/Tabs/chat/detail.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
+
+  get index => null;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,13 @@ class ChatScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         backgroundColor: Colors.green[600],
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Contacts(),
+              ));
+        },
         child: Icon(
           Icons.message,
           color: Theme.of(context).colorScheme.primary,
