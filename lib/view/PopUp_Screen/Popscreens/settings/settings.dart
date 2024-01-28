@@ -66,9 +66,14 @@ class _settingsState extends State<settings> {
                         TextStyle(color: Theme.of(context).colorScheme.primary),
                   ),
                   subtitle: Text(
-                    "in the end you only have yourself",
+                    "in the end you only have ...",
                     style:
                         TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
+                  trailing: Icon(
+                    Icons.qr_code,
+                    size: 35,
+                    color: Colors.green[700],
                   ),
                 ),
               ),

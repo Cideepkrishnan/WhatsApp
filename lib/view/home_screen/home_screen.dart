@@ -76,7 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
           bottom: TabBar(
               indicator: UnderlineTabIndicator(
                   borderSide: BorderSide(
-                      width: 3, color: Theme.of(context).colorScheme.primary)),
+                      width: 3, color: Color.fromARGB(255, 3, 203, 63)
+                      // Theme.of(context).colorScheme.primary
+                      )),
               indicatorColor: colorconstant.PrimaryBlack,
               tabs: [
                 Positioned(
@@ -91,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       TextStyle(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
-                  "Status",
+                  "Updates",
                   style:
                       TextStyle(color: Theme.of(context).colorScheme.primary),
                 ),
