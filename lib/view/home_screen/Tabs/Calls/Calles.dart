@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/utils/color_constant/color_constant.dart';
 import 'package:whatsapp/utils/database/database.dart';
+import 'package:whatsapp/view/home_screen/Tabs/Calls/CallListScreen/call_list_screen.dart';
 
 class CallScreen extends StatelessWidget {
   const CallScreen({super.key});
@@ -12,7 +13,13 @@ class CallScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         backgroundColor: Colors.green[600],
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CallListScreen(),
+              ));
+        },
         child: Icon(
           Icons.add_call,
           color: Theme.of(context).colorScheme.primary,
@@ -63,7 +70,7 @@ class CallScreen extends StatelessWidget {
             ListView.builder(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
-              physics: ScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               itemCount: database.forcall.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.all(8.0),
