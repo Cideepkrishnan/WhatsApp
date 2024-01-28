@@ -64,21 +64,56 @@ class linked_device extends StatelessWidget {
                     style: TextStyle(color: colorconstant.PrimaryGrey),
                   ),
                 ),
-                ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.green[600],
-                    radius: 30,
-                    child: Icon(
-                      Icons.window_sharp,
-                      color: Colors.white,
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        actions: [
+                          Column(
+                            children: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text("Log out",
+                                      style: TextStyle(color: Colors.red))),
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    "Close",
+                                    style: TextStyle(color: Colors.green),
+                                  ))
+                            ],
+                          )
+                        ],
+                        elevation: 2,
+                        icon: Icon(Icons.window_sharp),
+                        title: Text("Windows"),
+                        content: Text("Last active 17 Januvary,8:35 pm"),
+                      ),
+                    );
+                  },
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.green[600],
+                      radius: 30,
+                      child: Icon(
+                        Icons.window_sharp,
+                        color: Colors.white,
+                      ),
                     ),
+                    title: Text(
+                      "Windows",
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary),
+                    ),
+                    subtitle: Text("Last active 17 Januvary,8:35 pm"),
                   ),
-                  title: Text(
-                    "Windows",
-                    style:
-                        TextStyle(color: Theme.of(context).colorScheme.primary),
-                  ),
-                  subtitle: Text("Last active 17 Januvary,8:35 pm"),
                 )
               ],
             ),
